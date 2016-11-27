@@ -23,39 +23,40 @@
 
 <div class="container">
 
-<h1>Finder - a TB project</h1>
 
 <div class="container">
-    <div class="row">
-	    <div class="col-sm-3 col-md-3 pull-right">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Actor" name="srch-term" id="srch-term">
+    <section class="content">
+                <h2>Please enter your movie</h2>
+                
+                <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="text" id="input-25" />
+                    <label class="input__label input__label--ichiro" for="input-25">
+                        <span class="input__label-content input__label-content--ichiro">Actor</span>
+                    </label>
+                </span>
+                <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="text" id="input-26" />
+                    <label class="input__label input__label--ichiro" for="input-26">
+                        <span class="input__label-content input__label-content--ichiro">Genre</span>
+                    </label>
+                </span>
+                <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="text" id="input-27" />
+                    <label class="input__label input__label--ichiro" for="input-27">
+                        <span class="input__label-content input__label-content--ichiro">Rating</span>
+                    </label>
+                </span>
+                 <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="text" id="input-28" />
+                    <label class="input__label input__label--ichiro" for="input-28">
+                        <span class="input__label-content input__label-content--ichiro">Year</span>
+                    </label>
+                </span>
+            </section>
+            
         </div>
-        </form>
-        </div>
-	    <div class="col-sm-3 col-md-3 pull-right">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Genre" name="srch-term" id="srch-term">
-        </div>
-        </form>
-        </div>
-	    <div class="col-sm-3 col-md-3 pull-right">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Rating" name="srch-term" id="srch-term">
-        </div>
-        </form>
-        </div>
-	     <div class="col-sm-3 col-md-3 pull-right">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Year" name="srch-term" id="srch-term">
-        </div>
-        </form>
-        </div>
-    </div>
+
+
  </div>
 
 
@@ -106,6 +107,38 @@
   </div>
 </div>
 
+<script src="js/classie.js"></script>
+        <script>
+            (function() {
+                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                if (!String.prototype.trim) {
+                    (function() {
+                        // Make sure we trim BOM and NBSP
+                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                        String.prototype.trim = function() {
+                            return this.replace(rtrim, '');
+                        };
+                    })();
+                }
+                [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+                    // in case the input is already filled..
+                    if( inputEl.value.trim() !== '' ) {
+                        classie.add( inputEl.parentNode, 'input--filled' );
+                    }
+                    // events:
+                    inputEl.addEventListener( 'focus', onInputFocus );
+                    inputEl.addEventListener( 'blur', onInputBlur );
+                } );
+                function onInputFocus( ev ) {
+                    classie.add( ev.target.parentNode, 'input--filled' );
+                }
+                function onInputBlur( ev ) {
+                    if( ev.target.value.trim() === '' ) {
+                        classie.remove( ev.target.parentNode, 'input--filled' );
+                    }
+                }
+            })();
+        </script>
 
 </body>
 </html>
