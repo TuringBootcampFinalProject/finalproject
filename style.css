@@ -18,3 +18,28 @@ html,body{
     color: white;
     opacity: 1;
 }
+
+.container{
+ margin: 30px 30px 30px 30px;
+}
+
+
+.col-sm-3{
+	text-align: center;
+}
+
+.col-sm-4{
+	text-align: center;
+}
+
+
+.btn{
+	width: 200px;
+}
+
+.list-unstyled li{
+	font-size: 14pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+}
