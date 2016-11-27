@@ -9,6 +9,10 @@ html,body{
 }
 
 
+h1 {
+	font-family: Benguiat;
+}
+
 .row{
 	background-color: black;
     background-size: cover;
