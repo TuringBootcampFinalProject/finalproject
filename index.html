@@ -16,18 +16,19 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="js/classie.js"></script>
+<script src="js/themoviedb.min.js"></script>
+<script src="js/process.js"></script>
+
+
 </head>
 <body>
 
 
-	<script>
-	$(document).ready(function(){
-	  $.getJSON("https://api.themoviedb.org/3/movie/550?api_key=96e769aaf4e0ffe7112b1cc2cbdd9db9", function (data) {
-      fight = data;});
-      console.log(fight['genres'][0]['name'])
-	});
-	</script>
-	<div class="container">
+
+<div class="pics">
+	
+</div>
 
 
 	<div class="container">
@@ -62,8 +63,6 @@
 	            
 	        </div>
 
-
-	 </div>
 
 
 
@@ -113,7 +112,7 @@
 	  </div>
 	</div>
 
-	<script src="js/classie.js"></script>
+
 	        <script>
 	            (function() {
 	                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
