@@ -24,6 +24,7 @@
 	$(document).ready(function(){
 	  $.getJSON("https://api.themoviedb.org/3/movie/550?api_key=96e769aaf4e0ffe7112b1cc2cbdd9db9", function (data) {
       fight = data;});
+      console.log(fight['genres'][0]['name'])
 	});
 	</script>
 	<div class="container">
