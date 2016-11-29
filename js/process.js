@@ -4,6 +4,7 @@ function successCB(data) {
     var obj = $.parseJSON(data);
     obj.results.forEach(function(item){
     	var url = theMovieDb.common.images_uri + item.poster_path;
+    	console.log(url)
     	var img = $(document.createElement("img"));
       	img.attr('src', url);
       	img.appendTo(".pics")
