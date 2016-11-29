@@ -4,7 +4,6 @@ function successCB(data) {
     var obj = $.parseJSON(data);
     obj.results.forEach(function(item){
     	var url = theMovieDb.common.images_uri + item.poster_path;
-    	console.log(url)
     	var img = $(document.createElement("img"));
       	img.attr('src', url);
       	img.appendTo(".pics")
@@ -16,4 +15,20 @@ function errorCB(data) {
     };
 
 
-theMovieDb.discover.getMovies({'year': 2009 }, successCB, errorCB)
+$(document).ready(function(){
+    $("#searchbutton").click(function(){
+      var actor = $('#input-25').val();
+      var genre = $('#input-26').val();
+      var rating = $('#input-27').val();
+      var year = $('#input-28').val();
+      console.log(actor + genre + rating + year)
+      console.log("genres")
+
+      theMovieDb.discover.getMovies({'year': year , 'with_genres' : 16 }, successCB, errorCB)
+
+    });
+
+
+    });
+
+
