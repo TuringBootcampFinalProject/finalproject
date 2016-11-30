@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- <link rel="stylesheet" href="awesomplete.css" />
 <script src="awesomplete.js" async></script>  -->
@@ -45,7 +46,22 @@
 	                    </label>
 	                </span>
 
-					<select class="genres-select"></select>
+	                
+	            <!--   
+	           <select class="genres-select" id="input-26" /></select>
+	            	 -->
+	                
+	                <span class="input input--ichiro">
+	                    <input class="input__field input__field--ichiro" type="text" id="input-26" list="option" />
+						<datalist id="option" class="genres-select">
+						</datalist>
+		                <label class="input__label input__label--ichiro" for="input-26">
+	                        <span class="input__label-content input__label-content--ichiro">Genre</span>
+	                    </label>
+	                </span>
+
+					
+	               
 
 
 	                <span class="input input--ichiro">
@@ -54,6 +70,7 @@
 	                        <span class="input__label-content input__label-content--ichiro">Rating</span>
 	                    </label>
 	                </span>
+
 	                 <span class="input input--ichiro">
 	                    <input class="input__field input__field--ichiro year-select" type="text" id="input-28" />
 	                    <label class="input__label input__label--ichiro" for="input-28">
@@ -85,10 +102,11 @@
 	</div>
 
 
-
+ <div class="container">
 
 				<ul class="movie-list"></ul>
 
+</div>
 
 
 
@@ -123,6 +141,9 @@
 	                }
 	            })();
 	        </script>
+
+
+	      
 
 </body>
 </html>

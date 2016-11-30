@@ -24,20 +24,33 @@ var application = function() {
     $.ajax(genresEP).then(fillGenres); // line 38
   };
   
-  function fillGenres(response) {
-    response.genres.map(function(item) {
-      var option = $('<option />').val(item.id).text(item.name);
+//  function fillGenres(response) {
+//   response.genres.map(function(item) {
+ //     var option = $('<option />').val(item.id).text(item.name);
 
-      
+  //    
+  //    select.append(option);
+  //    console.log(select.val())
+  //  });
+ // };
+
+function fillGenres(response) {
+    response.genres.map(function(item) {
+      var option = $('<option />').text(item.name).val(item.id);
+
+
+
       select.append(option);
-      console.log(select.val())
+      //console.log(select[0])
     });
   };
+
+
  
   
  // le search
   function search() {
-    var genreID = select.val();
+    var genreID = $("#input-26").val();
     var yearID = yearSelect.val();
     var voteID = ratingSelect.val();
     var runtimeID = runtimeSelect.val();
@@ -76,10 +89,10 @@ $(application); // Initilize app
 // function successCB(data) {
 //     var obj = $.parseJSON(data);
 //     obj.results.slice(0,4).forEach(function(item){
-//     	var url = theMovieDb.common.images_uri + item.poster_path;
-//     	var img = $(document.createElement("img"));
-//       	img.attr('src', url);
-//       	img.appendTo(".pics")
+//      var url = theMovieDb.common.images_uri + item.poster_path;
+//      var img = $(document.createElement("img"));
+//        img.attr('src', url);
+//        img.appendTo(".pics")
 //     })
 // };
 
