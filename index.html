@@ -39,47 +39,23 @@
 
 	             
 	                <span class="input input--ichiro">
-	                    <input class="input__field input__field--ichiro" type="text" id="input-25" />
+	                    <input class="input__field input__field--ichiro runtime-select" type="text" id="input-25" />
 	                    <label class="input__label input__label--ichiro" for="input-25">
-	                        <span class="input__label-content input__label-content--ichiro">Actor</span>
+	                        <span class="input__label-content input__label-content--ichiro">Runtime</span>
 	                    </label>
 	                </span>
-	                <span class="input input--ichiro">
-	                    <input class="input__field input__field--ichiro awesomplete" type="text" id="input-26" list="mylist" />
-		                    <datalist id="mylist">
-							<option>Action</option>
-							<option>Adventure</option>
-							<option>Animation</option>
-							<option>Comedy</option>
-							<option>Crime</option>
-							<option>Documentary</option>
-							<option>Drama</option>
-							<option>Family</option>
-							<option>Fantasy</option>
-							<option>History</option>
-							<option>Horror</option>
-							<option>Music</option>
-							<option>Mystery</option>
-							<option>Romance</option>
-							<option>Science Fiction</option>
-							<option>TV Movie</option>
-							<option>Thriller</option>
-							<option>War</option>
-							<option>Western</option>
 
-							</datalist>
-	                    <label class="input__label input__label--ichiro" for="input-26">
-	                        <span class="input__label-content input__label-content--ichiro">Genre</span>
-	                    </label>
-	                </span>
+					<select class="genres-select"></select>
+
+
 	                <span class="input input--ichiro">
-	                    <input class="input__field input__field--ichiro" type="text" id="input-27" />
+	                    <input class="input__field input__field--ichiro rating-select" type="text" id="input-27" />
 	                    <label class="input__label input__label--ichiro" for="input-27">
 	                        <span class="input__label-content input__label-content--ichiro">Rating</span>
 	                    </label>
 	                </span>
 	                 <span class="input input--ichiro">
-	                    <input class="input__field input__field--ichiro" type="text" id="input-28" />
+	                    <input class="input__field input__field--ichiro year-select" type="text" id="input-28" />
 	                    <label class="input__label input__label--ichiro" for="input-28">
 	                        <span class="input__label-content input__label-content--ichiro">Year</span>
 	                    </label>
@@ -96,7 +72,7 @@
 			<div class="col-sm-4 col-md-4">
 			</div>
 			<div class="col-sm-4 col-md-4">
-				  <button type="button" class="btn btn-default" id="searchbutton">
+				  <button type="button" class="btn btn-default searchbutton">
 				    <span class="glyphicon glyphicon-search"></span> Search
 				  </button>
 			</div>
@@ -110,29 +86,10 @@
 
 
 
-<div class="container">
-	<div class="row">
-	<div class="col-sm-1 col-md-1"></div>
-			<div class="col-sm-10 col-md-10">
-				<div class="pics"></div>
-			</div>
-	<div class="col-sm-1 col-md-1"></div>
-	</div>
-</div>
+
+				<ul class="movie-list"></ul>
 
 
-
-
-	<div class="container">
-	  <div class="row">
-		    <div class="col-sm-6 col-md-6 pull-left">
-	        <ul class="list-unstyled">
-
-	        </ul>
-	        </div>
-	        <div class="col-sm-6 col-md-6 pull-left"></div>
-	  </div>
-	</div>
 
 
 	        <script>
