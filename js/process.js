@@ -4,9 +4,8 @@ var application = function() {
   var basePath = 'https://api.themoviedb.org/3';
   var genresEP = basePath + '/genre/movie/list?api_key=' + apiKey + '&language=en-US';
 
-  
   var imageBasePath = 'http://image.tmdb.org/t/p/w500';
-  var actorPath = basePath + '/search/person?api_key=' + apiKey
+  // var actorPath = basePath + '/search/person?api_key=' + apiKey
   
   // buttons and input fields
   var button = $('.searchbutton');
